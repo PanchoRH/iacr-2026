@@ -1,4 +1,62 @@
-/* Candidate-page header only; the shared site stylesheet remains unchanged. */
+/* Candidate-page styles; the shared site stylesheet remains unchanged. */
+.site-header .nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  height: auto;
+  min-height: 92px;
+  padding-block: 16px;
+  gap: 28px;
+}
+.site-header .brand {
+  min-width: 0;
+}
+.candidate-tii-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  flex-shrink: 0;
+}
+.candidate-tii-mark {
+  width: 56px;
+  height: 56px;
+}
+.candidate-tii-wordmark {
+  width: 131px;
+  height: auto;
+}
+.candidate-tii-logo:focus-visible {
+  outline: 2px solid #6400ff;
+  outline-offset: 6px;
+}
+.candidate-footer-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 22px;
+}
+@media (max-width: 900px) {
+  .site-header .nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+@media (max-width: 620px) {
+  .site-header .nav {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .site-header .candidate-tii-mark {
+    width: 44px;
+    height: 44px;
+  }
+  .site-header .candidate-tii-wordmark {
+    width: 103px;
+  }
+  .candidate-footer-side {
+    align-items: flex-start;
+  }
+}
+
 .candidate-header {
   padding: 52px 0 48px;
 }
